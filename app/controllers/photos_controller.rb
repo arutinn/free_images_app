@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class PhotosController < ApplicationController
+	before_action :find_photo, only: [:show, :edit, :update, :destroy]
   def index
-    @photo = Photo
+    @photos = Photo.all
+    #render plain: @photos.map { |i| "#{i.name}: #{i.description}"}
+    #render :index
     end
 
   def show
@@ -16,7 +19,8 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(photo_params)
-    render 'new'
+    redirect_to @photo
+    #render 'new'
   end
 
   private
@@ -24,4 +28,9 @@ class PhotosController < ApplicationController
   def photo_params
     params.require(:photo).permit(:name, :description)
   end
+
+  def find_photo
+      @photo = Photo.where(id: params[:id]).first
+      render_404 unless @photo
+    end
 end
