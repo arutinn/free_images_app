@@ -1,24 +1,8 @@
-# README
+Task list:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Search the high quality free photos (using Unsplash  API)
+(by keyword or random photo)
 
-Things you may want to cover:
+User authentication
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Allow users to bookmark their favorite images

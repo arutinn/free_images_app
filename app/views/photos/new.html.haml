@@ -1,0 +1,7 @@
+%h1 New seacrh
+
+
+= simple_form_for(@photo, html: { class: 'form-inline' }) do |f|
+
+	= render partial: "form", locals: { f: f }
+	%p= f.submit "OK"
