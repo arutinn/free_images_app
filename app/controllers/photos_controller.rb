@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     @photo
     # render plain: 'Page not found', status: 404 unless @photos
   end
-
+  
   def new
     @photo = Photo.new
   end

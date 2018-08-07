@@ -44,7 +44,7 @@ gem 'haml'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rmagick'
-
+gem 'unsplash'
 gem 'devise'
 
 gem 'rubocop'

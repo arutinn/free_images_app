@@ -2,4 +2,7 @@
 
 class Photo < ApplicationRecord
   validates :name, presence: true
+
+ 
+
 end
