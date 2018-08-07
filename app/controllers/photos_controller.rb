@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     @photo
     # render plain: 'Page not found', status: 404 unless @photos
   end
-  
+
   def new
     @photo = Photo.new
   end
@@ -22,6 +22,8 @@ class PhotosController < ApplicationController
     redirect_to @photo
     #render 'new'
   end
+
+
 
   private
 
@@ -33,4 +35,13 @@ class PhotosController < ApplicationController
       @photo = Photo.where(id: params[:id]).first
       render_404 unless @photo
     end
+
+   def render_404
+    render file: "public/404.html", status: 404
+  end
+
+  def render_403
+    render file: "public/403.html", status: 404
+  end
+
 end
