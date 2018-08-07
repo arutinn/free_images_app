@@ -1,8 +1,9 @@
 %h1 New seacrh
-Please chose the size of photo (raw, full, regular, small, thumb)
+
 
 = simple_form_for(@photo, html: { class: 'form-inline' }) do |f|
 
 	= render partial: "form", locals: { f: f }
+	Please chose the size of photo (raw, full, regular, small, thumb)
 	%p= f.submit "OK"
 	= link_to "Back", :back

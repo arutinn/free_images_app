@@ -1,9 +1,8 @@
 %h1 Look at the #{@photo.name } picture:
-%td
-	%ul Description: #{@photo.description}
 
-= image_tag Unsplash::Photo.random(query: "#{@photo.name}")[:urls][:small]
+= image_tag show_photo(@photo.name)
 
 %br/
 = link_to "Back", :back
+|
 = link_to "Home page", controller: "welcome"
