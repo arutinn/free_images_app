@@ -1,6 +1,8 @@
 %h1 Look at the #{@photo.name } picture:
 
 = image_tag show_photo(@photo.name)
+info about photo:
+= info_photo
 
 %br/
 = link_to "Back", :back

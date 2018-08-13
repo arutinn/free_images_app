@@ -73,6 +73,8 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    carender (1.0.0)
+      activesupport
     carrierwave (1.2.3)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -268,6 +270,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
+  carender
   carrierwave
   chromedriver-helper
   coffee-rails (~> 4.2)

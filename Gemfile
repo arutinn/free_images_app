@@ -46,6 +46,7 @@ gem 'mini_magick'
 gem 'rmagick'
 gem 'unsplash'
 gem 'devise'
+gem 'carender'
 
 gem 'rubocop'
 
