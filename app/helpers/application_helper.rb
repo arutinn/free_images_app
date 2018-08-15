@@ -2,7 +2,7 @@
 
 module ApplicationHelper
 
-	def show_photo(name)
+	def show_random_photo_by_keyword(name)
   	Unsplash::Photo.random(query: "#{name}")[:urls][:small] # return only photo link
   end
 
@@ -10,9 +10,12 @@ module ApplicationHelper
   	Unsplash::Photo.random(query: " ")[:urls][:small]
   end
 
-  def search_photo
-  	Unsplash::Photo.find("pFqrYbhIAXs") # return hash with all attributes (name, id, color, etc)
-  	#Unsplash::Photo.search("bicycle", 1, 1) # return one or more hashes
+  def search_photo(name, quantity)
+  	Unsplash::Photo.search(name, 1, quantity) # return one or more hashes
+  end
+
+  def search_photo_by_id(id)
+  	Unsplash::Photo.find(id) # return hash with all attributes (name, id, color, etc)
   end
 
   def info_photo

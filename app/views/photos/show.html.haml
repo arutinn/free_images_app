@@ -1,8 +1,10 @@
 %h1 Look at the #{@photo.name } picture:
 
-= image_tag show_photo(@photo.name)
+= image_tag search_photo(@photo.name, @photo.quantity)[0].urls.small
+= image_tag search_photo_by_id("BeA744ATibI").urls.small
+
 info about photo:
-= info_photo
+info here...
 
 %br/
 = link_to "Back", :back
