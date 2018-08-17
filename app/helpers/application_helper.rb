@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def random_photo
-  	Unsplash::Photo.random(query: " ")[:urls][:small]
+  	Unsplash::Photo.random(query: " ")
   end
 
   def search_photo(name, quantity)
@@ -16,12 +16,11 @@ module ApplicationHelper
 
   def search_photo_by_id(id)
   	Unsplash::Photo.find(id) # return hash with all attributes (name, id, color, etc)
+  													 # search_photo_by_id("BeA744ATibI").urls.small
   end
 
   def info_photo
-  	search_photo.user.name
-  	search_photo.id
-  	search_photo.created_at
+  	# ...
   end
 
 end

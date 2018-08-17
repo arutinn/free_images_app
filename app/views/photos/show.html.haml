@@ -1,11 +1,32 @@
 %h1 Look at the #{@photo.name } picture:
 
-= image_tag search_photo(@photo.name, @photo.quantity)[0].urls.small
-= image_tag search_photo_by_id("BeA744ATibI").urls.small
+Size is: #{@photo.size}
+%br/
 
-info about photo:
-info here...
+- size = @photo.size.to_sym
+- result = search_photo(@photo.name, @photo.quantity)[0]
+= image_tag result[:urls][size]
 
+%h2 Info about photo:
+Id:
+= result.id
+%br/
+Likes:
+= result.likes
+%br/
+Author name:
+= result.user.name
+%br/
+Author username:
+= result.user.username
+%br/
+Author portfolio link:
+= link_to result.user.portfolio_url, result.user.portfolio_url
+%br/
+%br/
+= link_to 'Download this photo', result.links.download
+(#{result.width}x#{result.height})
+%br/
 %br/
 = link_to "Back", :back
 |

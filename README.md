@@ -4,11 +4,13 @@ Search the high quality free photos (using Unsplash  API): -done
 by keyword -done
 random photo -done
 
-Can chose the size of photo
+Can choose the size of photo -done
 
-Display some info about photo
+Display some info about photo -done
 
-Generate a link to download current photo
+Generate a link to download current photo -done
+
+Can chose the quantity photos on page
 
 User authentication
 
