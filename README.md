@@ -16,6 +16,6 @@ User authentication
 
 Allow users to bookmark their favorite images
 
-Add calendar (or date with time) on homepage
+Add calendar (or date with time) on homepage -done
 
 Some frontend feachers (Bootstrap or try another framework)

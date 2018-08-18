@@ -46,8 +46,9 @@ gem 'mini_magick'
 gem 'rmagick'
 gem 'unsplash'
 gem 'devise'
-gem 'carender'
 
+# calendar plugin https://github.com/topfunky/calendar_helper
+gem 'calendar_helper'
 gem 'rubocop'
 
 gem 'better_errors'

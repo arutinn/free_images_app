@@ -9,3 +9,7 @@
 %br/
 %br/
 = link_to "Want a random photo? Click on this link.", controller: "welcome", action: "show"
+
+%h4 Today is #{@current_time}
+
+= calendar(:year => @current_date.year, :month => @current_date.month)
