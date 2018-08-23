@@ -10,7 +10,7 @@ Display some info about photo -done
 
 Generate a link to download current photo -done
 
-Can chose the quantity photos on page
+Can chose the quantity photos on page -done
 
 User authentication
 
