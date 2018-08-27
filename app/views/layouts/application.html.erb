@@ -8,7 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+    <% if current_user %>
+        You are logged in <b><%= current_user.email %></b>.
+      <% else %>
+        <%= link_to "Sigh In", "/users/sign_in" %> |
+        <%= link_to "Register", "/users/sign_up" %>.
+      <% end %>
   <body>
     <%= yield %>
   </body>

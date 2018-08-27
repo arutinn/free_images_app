@@ -1,3 +1,7 @@
+- if user_signed_in?
+	%span
+	= link_to 'Exit', destroy_user_session_path, :method => :delete
+
 %h1 Welcome to homepage
 %p You can find high quality free photos below
 

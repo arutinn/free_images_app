@@ -12,9 +12,13 @@ Generate a link to download current photo -done
 
 Can chose the quantity photos on page -done
 
-User authentication
+Add social share buttons (Facebook, Vk and etc)
+
+User authentication and authorization
 
 Allow users to bookmark their favorite images
+
+Add some stats
 
 Add calendar (or date with time) on homepage -done
 
