@@ -4,13 +4,10 @@ class PhotosController < ApplicationController
 	before_action :find_photo, only: [:show, :edit, :update, :destroy]
   def index
     @photos = Photo.all
-    #render plain: @photos.map { |i| "#{i.name}: #{i.description}"}
-    #render :index
     end
 
   def show
     @photo
-    # render plain: 'Page not found', status: 404 unless @photos
   end
 
   def new
@@ -23,6 +20,10 @@ class PhotosController < ApplicationController
     #render 'new'
   end
 
+  def destroy
+    @photo.destroy
+    redirect_to action: 'index'
+  end
 
 
   private
