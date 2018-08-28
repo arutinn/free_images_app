@@ -32,9 +32,5 @@ Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
 	(#{result[0][i].width}x#{result[0][i].height})
 	%br/
 	%br/
-	
-%br/
-= link_to "Back", :back
-|
-= link_to "Home page", controller: "welcome"
-%br/
+
+= render "welcome/navigation"

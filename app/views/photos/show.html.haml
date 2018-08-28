@@ -20,9 +20,5 @@ Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
 				%td= i + 1
 				%td= image_tag result[0][i][:urls][size]
 				%td{:width => "100"} Id: #{result[0][i].id} Likes: #{result[0][i].likes} Author name: #{result[0][i].user.name} Author username: #{result[0][i].user.username} Author profile page: #{link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url} #{link_to 'Download this photo', result[0][i].links.download} (#{result[0][i].width}x#{result[0][i].height})
-	
-%br/
-= link_to "Back", :back
-|
-= link_to "Home page", controller: "welcome"
-%br/
+
+= render "welcome/navigation"

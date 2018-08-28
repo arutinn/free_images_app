@@ -17,3 +17,5 @@
 %h4 Today is #{@current_time}
 
 = calendar(:year => @current_date.year, :month => @current_date.month)
+
+= render "shared/email"
