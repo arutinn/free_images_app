@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class PhotosController < ApplicationController
-	before_action :find_photo, only: [:show, :edit, :update, :destroy]
+
+	before_action :find_photo, only: [:show, :edit, :update, :destroy, :search_photo_by_id]
+
   def index
     @photos = Photo.all
     end
@@ -25,7 +27,6 @@ class PhotosController < ApplicationController
     redirect_to action: 'index'
   end
 
-
   private
 
   def photo_params
@@ -33,11 +34,11 @@ class PhotosController < ApplicationController
   end
 
   def find_photo
-      @photo = Photo.where(id: params[:id]).first
-      render_404 unless @photo
-    end
+    @photo = Photo.where(id: params[:id]).first
+    render_404 unless @photo
+  end
 
-   def render_404
+  def render_404
     render file: "public/404.html", status: 404
   end
 

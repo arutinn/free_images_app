@@ -1,0 +1,9 @@
+%br/
+%h2 It is your favorite photos list:
+
+- array = @user.favorite_photos.split(/ /)
+- array.size.times do |i|
+	= image_tag search_photo_by_id(array[i]).urls.thumb
+
+%br/
+= render "shared/navigation"

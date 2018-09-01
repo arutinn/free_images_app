@@ -9,6 +9,7 @@ Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
 - result = []
 - result << search_photo(@photo.name, @photo.quantity)
 
+
 %table{:border => 1}
 	%tbody
 		%tr
@@ -19,6 +20,8 @@ Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
 			%tr
 				%td= i + 1
 				%td= image_tag result[0][i][:urls][size]
-				%td{:width => "100"} Id: #{result[0][i].id} Likes: #{result[0][i].likes} Author name: #{result[0][i].user.name} Author username: #{result[0][i].user.username} Author profile page: #{link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url} #{link_to 'Download this photo', result[0][i].links.download} (#{result[0][i].width}x#{result[0][i].height})
+				%td{:width => "150"} Id: #{result[0][i].id} Likes: #{result[0][i].likes} Author name: #{result[0][i].user.name} Author username: #{result[0][i].user.username} Author profile page: #{link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url} #{link_to 'Download this photo', result[0][i].links.download} (#{result[0][i].width}x#{result[0][i].height}) 
+				%td Favorite photos: #{current_user.favorite_photos}
+				%td= add_to_favorite(result[0][i].id)
 
 = render "shared/navigation"

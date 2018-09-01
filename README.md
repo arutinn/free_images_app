@@ -14,9 +14,9 @@ Can chose the quantity photos on page -done
 
 Add social share buttons (Facebook, Vk and etc)
 
-User authentication and authorization
+User authentication and authorization -done
 
-Allow users to bookmark their favorite images
+Allow users to bookmark their favorite images -done
 
 Add some stats
 
