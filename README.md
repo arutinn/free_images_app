@@ -23,3 +23,5 @@ Add some stats
 Add calendar (or date with time) on homepage -done
 
 Some frontend feachers (Bootstrap or try another framework)
+
+Deploy to Heroku

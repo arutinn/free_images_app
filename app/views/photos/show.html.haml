@@ -22,6 +22,6 @@ Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
 				%td= image_tag result[0][i][:urls][size]
 				%td{:width => "150"} Id: #{result[0][i].id} Likes: #{result[0][i].likes} Author name: #{result[0][i].user.name} Author username: #{result[0][i].user.username} Author profile page: #{link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url} #{link_to 'Download this photo', result[0][i].links.download} (#{result[0][i].width}x#{result[0][i].height}) 
 				%td Favorite photos: #{current_user.favorite_photos}
-				%td= add_to_favorite(result[0][i].id)
+				%td= link_to 'Add_Favorite'
 
 = render "shared/navigation"

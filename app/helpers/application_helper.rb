@@ -25,7 +25,6 @@ def show_random_photo_by_keyword(name)
 
   def add_to_favorite(id)
     current_user.update(favorite_photos: current_user.favorite_photos + " " + id)
-    #redirect_to :controller => 'users', :action => 'show'
   end
 
 end

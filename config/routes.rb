@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get 'welcome/show'
   #get 'users/:id' => 'users#show'
   
-  resources :users, only: [:show]
+  resources :users #, only: [:show]
   resources :photos
+  #put 'photos/add_to_favoritesss'
   
   root 'welcome#index'
 end

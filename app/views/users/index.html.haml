@@ -1,0 +1,4 @@
+- @users.each do |i|
+	%p= link_to i.email, user_path(i.id)
+
+= render "shared/navigation"

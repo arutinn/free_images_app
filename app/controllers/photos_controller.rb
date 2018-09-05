@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
 
   def index
     @photos = Photo.all
-    end
+  end
 
   def show
     @photo
@@ -26,7 +26,8 @@ class PhotosController < ApplicationController
     @photo.destroy
     redirect_to action: 'index'
   end
-
+  
+  
   private
 
   def photo_params
