@@ -1,0 +1,21 @@
+%h1 This is Unspalsh statistics
+- stats = Unsplash::Stats.total
+
+Total photos: #{stats["total_photos"]}
+%br/
+Photo downloads: #{stats["photo_downloads"]}
+%br/
+Views: #{stats["views"]}
+%br/
+Likes: #{stats["likes"]}
+%br/
+Photographers: #{stats["photographers"]}
+%br/
+Downloads per second: #{stats["downloads_per_second"]}
+%br/
+Views per second: #{stats["views_per_second"]}
+%br/
+Developers: #{stats["developers"]}
+
+%br/
+= render "shared/navigation"

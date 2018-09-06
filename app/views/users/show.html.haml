@@ -1,11 +1,16 @@
 = link_to "Edit profile", edit_user_registration_path
 
 %br/
-%h2 It is your favorite photos list:
+%h2 Favorite photos list:
 
-- array = @user.favorite_photos.split(/ /)
-- array.size.times do |i|
-	= image_tag search_photo_by_id(array[i]).urls.thumb
+
+- if @user.favorite_photos
+	- array = @user.favorite_photos.split(/ /)
+	- array.size.times do |i|
+		= image_tag search_photo_by_id(array[i]).urls.thumb
+- else
+	= render plain: "List is empty"
+	
 
 %br/
 = render "shared/navigation"

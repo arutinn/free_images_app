@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   get 'welcome/show'
+  get 'welcome/stats'
   #get 'users/:id' => 'users#show'
   
   resources :users #, only: [:show]
