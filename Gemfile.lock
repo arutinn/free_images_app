@@ -222,6 +222,11 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    shareable (1.1.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    social-share-button (1.1.0)
+      coffee-rails
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -286,7 +291,9 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
+  shareable
   simple_form!
+  social-share-button (= 1.1.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

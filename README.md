@@ -18,7 +18,7 @@ User authentication and authorization -done
 
 Allow users to bookmark their favorite images -done
 
-Add some stats
+Add some stats -done
 
 Add calendar (or date with time) on homepage -done
 

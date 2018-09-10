@@ -52,7 +52,8 @@ gem 'calendar_helper'
 gem 'rubocop'
 
 gem 'better_errors'
-
+gem 'social-share-button', '1.1.0' # don`t work at this project
+gem 'shareable' # temporality
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
