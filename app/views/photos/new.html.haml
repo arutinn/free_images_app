@@ -1,12 +1,12 @@
 %h1 New seacrh
 
 
-= simple_form_for(@photo, html: { class: 'form-inline' }) do |f|
+= simple_form_for(@photo, html: { class: 'form-inline'} ) do |f|
 
 	= render partial: "form", locals: { f: f }
 	Please choose the size of photo (raw, full, regular, small, thumb)
 	%br/
 	Please choose the quantity (pictures per page)
-	%p= f.submit "OK"
+	= f.submit :Search, class: 'btn btn-primary'
 
 = render "shared/navigation"

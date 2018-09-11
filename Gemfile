@@ -40,6 +40,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'haml'
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
+gem "font-awesome-rails"
 
 gem 'carrierwave'
 gem 'mini_magick'
