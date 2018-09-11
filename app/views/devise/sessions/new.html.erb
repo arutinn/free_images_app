@@ -1,15 +1,24 @@
-<h2>Log in</h2>
-
+<div class="row">
+	<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<center><h2>Please Login</h2></center>
+			<hr>
+		</div>
+</div>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+  
+ <center><div class="form-inputs">
+  <i class="fa fa-at"></i>
+  <%= f.input :email, required: false, autofocus: true, placeholder: "Your email here", label: false%>
+  <i class="fa fa-key"></i>
+  <%= f.input :password, required: false, label: false, placeholder: "Your password here" %>
+  <br>
+  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+</div></center>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
+<center><div class="col-md-6">
+	<button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
+  <a class="btn btn-link" href="password/new">Forgot Your Password?</a>
+</div></center>
+
 <% end %>
-
-<%= render "devise/shared/links" %>

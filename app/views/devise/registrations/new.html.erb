@@ -1,17 +1,23 @@
-<h2>Sign up</h2>
-
+<div class="row">
+	<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<center><h2>Register New User</h2></center>
+			<hr>
+		</div>
+</div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+  <center><div class="form-inputs">
+  <i class="fa fa-at"></i>
+    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Your email here" %>
+  <i class="fa fa-key"></i>
+    <%= f.input :password, required: true, label: false, placeholder: "Your password here" %>
+    <%= f.input :password_confirmation, required: true, label: false, placeholder: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
   </div>
-
+<br>
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+    <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
+  </div></center>
+  
 <% end %>
-
-<%= render "devise/shared/links" %>

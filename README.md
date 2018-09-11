@@ -23,8 +23,9 @@ Add some stats -done
 Add calendar (or date with time) on homepage -done
 
 Some frontend feachers (Bootstrap or try another framework)
-Add Sigh In, Sigh Up, Forgot password?, registration pages
+Add Sigh In, Sigh Up, Forgot password?, Registration pages -done
 Add navigation menu
+Add footer
 
 Fix bugs
 
