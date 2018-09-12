@@ -2,7 +2,9 @@
 %br/
 = f.input :description
 %br/
-= f.input :size
+= f.input :size, collection: ['raw', 'full', 'regular', 'small', "thumb"]
 %br/
-= f.input :quantity
+= f.input :quantity, placeholder: "per page"
 %br/
+
+= render partial: "form", locals: { f: f }

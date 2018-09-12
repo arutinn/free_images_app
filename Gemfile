@@ -43,6 +43,7 @@ gem 'haml'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem "bootstrap_form", ">= 4.0.0.alpha1"
 
 gem 'carrierwave'
 gem 'mini_magick'
