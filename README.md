@@ -24,6 +24,8 @@ Add calendar (or date with time) on homepage -done
 
 Some frontend feachers (Bootstrap or try another framework)
 Add Sigh In, Sigh Up, Forgot password?, Registration pages -done
+Add random photo, home, favorite list pages -done
+Add new search, previous searches, list of users, statistics pages
 Add navigation menu
 Add footer
 

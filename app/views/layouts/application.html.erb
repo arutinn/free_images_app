@@ -8,13 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <center>
     <% if current_user %>
         You are logged in <b><%= current_user.email %></b>
         <%= link_to "Your favorite list", user_path(current_user.id) %>
+        |
+        <%= link_to "Exit", destroy_user_session_path, :method => :delete %>
+        |
+        <%= link_to "Edit profile", edit_user_registration_path %>
       <% else %>
         <%= link_to "Sigh In", "/users/sign_in" %> |
         <%= link_to "Register", "/users/sign_up" %>.
       <% end %>
+  </center>
   <body>
     <%= yield %>
   </body>

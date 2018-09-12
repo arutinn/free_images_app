@@ -1,25 +1,26 @@
-- if user_signed_in?
-	%span
-	= link_to 'Exit', destroy_user_session_path, :method => :delete
+.row
+	.col-md-3
+	.col-md-6
+		%center
+			%h1 Welcome to homepage
+			%p You can find high quality free photos below
+			%hr/
 
-%h1 Welcome to homepage
-%p You can find high quality free photos below
+%center
+	= link_to "New search", controller: "photos", action: "new"
+	|
+	= link_to "Previous searches", controller: "photos", action: "index"
+	|
+	= link_to "List of all users", controller: "users", action: "index"
+	|
+	= link_to "Unsplash statistics", controller: "welcome", action: "stats"
 
-= link_to "New search", controller: "photos", action: "new"
-|
-= link_to "Previous searches", controller: "photos", action: "index"
-|
-= link_to "List of all users", controller: "users", action: "index"
-|
-= link_to "Unsplash statistics", controller: "welcome", action: "stats"
+	%br/
+	= link_to "Want a random photo? Click on this link.", controller: "welcome", action: "show"
+	%br/
+	%br/
+	%h4 Today is #{@current_time}
 
-%br/
-%br/
-%br/
-= link_to "Want a random photo? Click on this link.", controller: "welcome", action: "show"
-
-%h4 Today is #{@current_time}
-
-= calendar(:year => @current_date.year, :month => @current_date.month)
-
-= render "shared/email"
+	= calendar(:year => @current_date.year, :month => @current_date.month)
+	%br
+	= render "shared/email"

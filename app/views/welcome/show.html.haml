@@ -1,14 +1,19 @@
-%h1 This is your random photo:
+.row
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 This is your random photo:
+      %hr/
 
 - random_p = random_photo
-= image_tag random_p.urls.small
+%center
+  = image_tag random_p.urls.small
 
-%br/
-= link_to 'Download this photo', random_p.links.download
-(#{random_p.width}x#{random_p.height})
-%br/
-%br/
-= link_to "Want another photo? CLICK HERE!", controller: "welcome", action: "show"
-%br/
+%center
+  = link_to 'Download this photo', random_p.links.download
+  (#{random_p.width}x#{random_p.height})
+  %br/
+  = link_to "Want another photo? CLICK HERE!", controller: "welcome", action: "show"
+  %br/
 
 = render "shared/navigation"
