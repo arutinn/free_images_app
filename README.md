@@ -1,4 +1,4 @@
-h2 Task list:
+## Task list:
 
 Search the high quality free photos (using Unsplash  API): -done
 * by keyword -done
@@ -26,8 +26,9 @@ Some frontend feachers (Bootstrap or try another framework)
 * Add Sigh In, Sigh Up, Forgot password?, Registration pages -done
 * Add random photo, home, favorite list pages -done
 * Add new search, previous searches, list of users, statistics pages -done
-* Add navigation menu
+* Add navigation menu -done
 * Add footer -done
+---
 
 Fix bugs
 

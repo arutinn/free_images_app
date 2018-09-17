@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/welcome/index">Homepage</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:history.back()">Back <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Search
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/photos/new">New Search</a>
+          <a class="dropdown-item" href="/photos">Previous searches</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/welcome/show">Want a random photo? Click here</a>
+        </div>
+      </li>
+    </ul>
+
+  <span class="navbar-text">
+    <% if current_user %>
+      You are logged in <b><%= current_user.email %></b>
+      <%= link_to " Your favorite list ", user_path(current_user.id) %>
+      |
+      <%= link_to " Edit profile ", edit_user_registration_path %>
+      |
+      <%= link_to " Exit ", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sigh In", "/users/sign_in" %> |
+      <%= link_to "Register", "/users/sign_up" %>.
+    <% end %>
+  </span>
+
+  </div>
+</nav>
