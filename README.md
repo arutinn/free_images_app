@@ -1,35 +1,35 @@
 ## Task list:
 
-Search the high quality free photos (using Unsplash  API): -done
-* by keyword -done
-* random photo -done
+- [x] Search the high quality free photos (using Unsplash  API): 
+* by keyword 
+* random photo 
 
-Can choose the size of photo -done
+- [x] Can choose the size of photo 
 
-Display some info about photo -done
+- [x] Display some info about photo 
 
-Generate a link to download current photo -done
+- [x] Generate a link to download current photo 
 
-Can chose the quantity photos on page -done
+- [x] Can chose the quantity photos on page 
 
-Add social share buttons (Facebook, Vk and etc) -done
+- [x] Add social share buttons (Facebook, Vk and etc) 
 
-User authentication and authorization -done
+- [x] User authentication and authorization 
 
-Allow users to bookmark their favorite images -done
+- [x] Allow users to bookmark their favorite images 
 
-Add some stats -done
+- [x] Add some stats 
 
-Add calendar (or date with time) on homepage -done
+- [x] Add calendar (or date with time) on homepage 
 
-Some frontend feachers (Bootstrap or try another framework)
-* Add Sigh In, Sigh Up, Forgot password?, Registration pages -done
-* Add random photo, home, favorite list pages -done
-* Add new search, previous searches, list of users, statistics pages -done
-* Add navigation menu -done
-* Add footer -done
+- [x] Some frontend feachers (Bootstrap or try another framework)
+* Add Sigh In, Sigh Up, Forgot password?, Registration pages 
+* Add random photo, home, favorite list pages 
+* Add new search, previous searches, list of users, statistics pages 
+* Add navigation menu 
+* Add footer 
 ---
 
-Fix bugs
+- [ ] Fix bugs
 
-Deploy to Heroku
+- [ ] Deploy to Heroku

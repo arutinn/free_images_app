@@ -9,7 +9,7 @@
 			%hr/
 
 			= bootstrap_form_for(@photo, html: { class: 'form-inline'} ) do |f|
-				= render "search_field"
+				= render "newsearch_field"
 				= f.select :size, ['small', 'full', 'regular', 'raw', "thumb"]
 				= f.number_field :quantity, placeholder: "per page"
 
