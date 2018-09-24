@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/show'
   get 'welcome/stats'
-  #get 'users/:id' => 'users#show'
-  
-  resources :users #, only: [:show]
+  # get 'users/:id' => 'users#show'
+
+  resources :users # , only: [:show]
   resources :photos
-  #put 'photos/add_to_favoritesss'
-  
+  # put 'photos/add_to_favoritesss'
+
   root 'welcome#index'
 end

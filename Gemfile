@@ -39,25 +39,25 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'haml'
 gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap_form', '>= 4.0.0.alpha1'
+gem 'font-awesome-rails'
+gem 'haml'
 gem 'jquery-rails'
-gem "font-awesome-rails"
-gem "bootstrap_form", ">= 4.0.0.alpha1"
 
 gem 'carrierwave'
+gem 'devise'
 gem 'mini_magick'
 gem 'rmagick'
 gem 'unsplash'
-gem 'devise'
 
 # calendar plugin https://github.com/topfunky/calendar_helper
 gem 'calendar_helper'
 gem 'rubocop'
 
 gem 'better_errors'
-gem 'social-share-button', '1.1.0' # don`t work at this project
 gem 'shareable' # temporality
+gem 'social-share-button', '1.1.0' # don`t work at this project
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
