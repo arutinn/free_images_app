@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 require_relative 'boot'
 
@@ -11,12 +10,12 @@ module FreeImageApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-
+    
     Unsplash.configure do |config|
-      config.application_access_key = '4b9f43f92d64598cac580a444171cefd9825f70bc4105ef7b4c33a044b14c125'
-      config.application_secret = '236972ba8efd2cdbbdfc6d87980c9467850735dfa0ff5db5f722c4fe2c90fe51'
-      config.application_redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
-      config.utm_source = 'alices_terrific_client_app'
+      config.application_access_key = Rails.application.credentials.unsplash[:access_key]
+      config.application_secret = Rails.application.credentials.unsplash[:secret]
+      config.application_redirect_uri = Rails.application.credentials.unsplash[:redirect_uri]
+      config.utm_source = Rails.application.credentials.unsplash[:utm_source]
     end
 
     # Settings in config/environments/* take precedence over those specified here.
