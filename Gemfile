@@ -43,7 +43,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'devise'
 gem 'mini_magick'
-gem 'rmagick'
+# gem 'rmagick'
 gem 'unsplash'
 
 # calendar plugin https://github.com/topfunky/calendar_helper
