@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PhotosController < ApplicationController
   before_action :find_photo, only: %i[show edit update destroy search_photo_by_id]
 
