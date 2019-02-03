@@ -32,5 +32,5 @@
 
 - [ ] Fix bugs
 
-- [x] Deploy to Heroku
-* [https://free-photos.herokuapp.com](https://free-photos.herokuapp.com)
+[x] Deploy to Heroku
+[https://free-photos.herokuapp.com](https://free-photos.herokuapp.com)
