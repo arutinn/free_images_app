@@ -3,7 +3,7 @@
 module ApplicationHelper
   def show_random_photo_by_keyword(name)
     Unsplash::Photo.random(query: name.to_s)[:urls][:small] # return only photo link
-    end
+  end
 
   def random_photo
     Unsplash::Photo.random(query: ' ')

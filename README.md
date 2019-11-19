@@ -4,13 +4,13 @@
 * by keyword 
 * random photo 
 
-- [x] Can choose the size of photo 
+- [x] Ability to choose the size of photo
 
 - [x] Display some info about photo 
 
-- [x] Generate a link to download current photo 
+- [x] Generate a link to download a photo
 
-- [x] Can chose the quantity photos on page 
+- [x] Ability to chose the quantity photos on page
 
 - [x] Add social share buttons (Facebook, Vk and etc) 
 
@@ -23,14 +23,16 @@
 - [x] Add calendar (or date with time) on homepage 
 
 - [x] Some frontend feachers (Bootstrap or try another framework)
-* Add Sigh In, Sigh Up, Forgot password?, Registration pages 
+* Add Sigh In, Sigh Up, Forgot password, Registration pages
 * Add random photo, home, favorite list pages 
-* Add new search, previous searches, list of users, statistics pages 
+* Add new search, previous searches, list of users, statistics pages
 * Add navigation menu 
 * Add footer 
 ---
 
 - [ ] Fix bugs
 
-[x] Deploy to Heroku
+- [x] Deploy to Heroku
 [https://free-photos.herokuapp.com](https://free-photos.herokuapp.com)
+
+- [ ] Add specs
