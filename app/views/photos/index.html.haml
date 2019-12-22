@@ -1,15 +1,15 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 List of all previous searches
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 List of all previous searches
+      %hr/
 
 %center
-	- @photos.each do |i|
-		%p= link_to i.name, photo_path(i)
+  - @photos.each do |i|
+    %p= link_to i.name, photo_path(i)
 
 = render "shared/navigation"

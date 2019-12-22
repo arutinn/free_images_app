@@ -15,7 +15,7 @@
 %center
   = link_to 'Download this photo', random_p.links.download
   (#{random_p.width}x#{random_p.height})
-  %br/
+  = button_to "Add to favorite", favorite_photos_path(photo_id: random_p.id), class: 'btn btn-primary'
   = link_to "Want another photo? CLICK HERE!", controller: "welcome", action: "show"
   %br/
 

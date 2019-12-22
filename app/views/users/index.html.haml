@@ -1,16 +1,16 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 List of all users
-			You can see favorite photos of each user (just select user e-mail)
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 List of all users
+      You can see favorite photos of each user (just select user e-mail)
+      %hr/
 
 %center
-	- @users.each do |i|
-		%p= link_to i.email, user_path(i.id)
+  - @users.each do |i|
+    %p= link_to i.email, user_path(i.id)
 
 = render "shared/navigation"

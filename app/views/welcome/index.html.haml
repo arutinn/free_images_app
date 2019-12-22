@@ -1,29 +1,29 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 Welcome to homepage
-			%p You can find high quality free photos below
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 Welcome
+      %p You can find high quality free photos below
+      %hr/
 
 %center
-	= link_to "New search", controller: "photos", action: "new"
-	|
-	= link_to "Previous searches", controller: "photos", action: "index"
-	|
-	= link_to "List of all users", controller: "users", action: "index"
-	|
-	= link_to "Unsplash statistics", controller: "welcome", action: "stats"
+  = link_to "New search", controller: "photos", action: "new"
+  |
+  = link_to "Previous searches", controller: "photos", action: "index"
+  |
+  = link_to "List of all users", controller: "users", action: "index"
+  |
+  = link_to "Unsplash statistics", controller: "welcome", action: "stats"
 
-	%br/
-	= link_to "Want a random photo? Click on this link.", controller: "welcome", action: "show"
-	%br/
-	%br/
-	%h4 Today is #{@current_time}
+  %br/
+  = link_to "Want a random photo? Click on this link.", controller: "welcome", action: "show"
+  %br/
+  %br/
+  %h4 Today is #{@current_time}
 
-	= calendar(:year => @current_date.year, :month => @current_date.month)
-	%br
-	= render "shared/navigation"
+  = calendar(:year => @current_date.year, :month => @current_date.month)
+  %br
+  = render "shared/navigation"
