@@ -1,31 +1,31 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 This is Unspalsh statistics
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 This is Unspalsh statistics
+      %hr/
 
 - stats = Unsplash::Stats.total
 
 %center
-	.lead
-		Total photos:#{stats["total_photos"]}
-		%br/
-		Photo downloads: #{stats["photo_downloads"]}
-		%br/
-		Views: #{stats["views"]}
-		%br/
-		Likes: #{stats["likes"]}
-		%br/
-		Photographers: #{stats["photographers"]}
-		%br/
-		Downloads per second: #{stats["downloads_per_second"]}
-		%br/
-		Views per second: #{stats["views_per_second"]}
-		%br/
-		Developers: #{stats["developers"]}
+  .lead
+  Total photos:#{stats["total_photos"]}
+  %br/
+  Photo downloads: #{stats["photo_downloads"]}
+  %br/
+  Views: #{stats["views"]}
+  %br/
+  Likes: #{stats["likes"]}
+  %br/
+  Photographers: #{stats["photographers"]}
+  %br/
+  Downloads per second: #{stats["downloads_per_second"]}
+  %br/
+  Views per second: #{stats["views_per_second"]}
+  %br/
+  Developers: #{stats["developers"]}
 
 = render "shared/navigation"

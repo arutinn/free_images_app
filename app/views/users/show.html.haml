@@ -1,20 +1,15 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 Favorite photos list:
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 Favorite photos list:
+      %hr/
 
 %center
-	- if @user.favorite_photos
-		- array = @user.favorite_photos.split(/ /)
-		- array.size.times do |i|
-			= image_tag search_photo_by_id(array[i]).urls.thumb
-	- else
-		= render plain: "List is empty"
-	
+  - @user.favorite_photos.each do |photo|
+    = image_tag search_photo_by_id(photo.photo_id).urls.thumb
 
 = render "shared/navigation"

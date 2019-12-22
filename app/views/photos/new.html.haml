@@ -1,16 +1,16 @@
 :css
-	html { overflow-x: hidden; }
+  html { overflow-x: hidden; }
 
 .row
-	.col-md-3
-	.col-md-6
-		%center
-			%h1 New search
-			%hr/
+  .col-md-3
+  .col-md-6
+    %center
+      %h1 New search
+      %hr/
 
-			= bootstrap_form_for(@photo, html: { class: 'form-inline'} ) do |f|
-				= render "newsearch_field"
-				= f.select :size, ['small', 'full', 'regular', 'raw', "thumb"]
-				= f.number_field :quantity, placeholder: "per page"
+      = bootstrap_form_for(@photo, html: { class: 'form-inline'} ) do |f|
+        = render "newsearch_field"
+        = f.select :size, ['small', 'full', 'regular', 'raw', "thumb"]
+        = f.number_field :quantity, placeholder: "per page"
 
 = render "shared/navigation"
