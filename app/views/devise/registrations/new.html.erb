@@ -1,13 +1,9 @@
-<style>
-   html { overflow-x: hidden; }
-</style>
-
 <div class="row">
-	<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<center><h2>Register New User</h2></center>
-			<hr>
-		</div>
+  <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <center><h2>Register New User</h2></center>
+      <hr>
+    </div>
 </div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -23,5 +19,5 @@
   <div class="form-actions">
     <button type="submit" class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
   </div></center>
-  
+
 <% end %>

@@ -1,0 +1,9 @@
+.main-table {
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  &--small-width {
+    width: 150px;
+  }
+}
