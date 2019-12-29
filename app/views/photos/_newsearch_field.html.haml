@@ -1,0 +1,9 @@
+.container
+  .row.justify-content-center
+    %div
+      .card-body.row.no-gutters.align-items-center
+        .col
+          %input#photo_name.form-control.form-control-lg.form-control-borderless{:name => "photo[name]", :placeholder => "Search free photos", :type => "name"}/
+        .col-auto
+          %button.btn.btn-lg.btn-success{:type => "submit"} Search
+  %br/

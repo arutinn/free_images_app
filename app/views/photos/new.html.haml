@@ -5,9 +5,11 @@
       %h1 New search
       %hr/
 
-      = bootstrap_form_for(@photo, html: { class: 'form-inline'} ) do |f|
+      = bootstrap_form_for(@photo) do |f|
         = render "newsearch_field"
-        = f.select :size, ['small', 'full', 'regular', 'raw', "thumb"]
-        = f.number_field :quantity, placeholder: "per page"
+        .half-width.auto-margin
+          = f.select :size, ['small', 'full', 'regular', 'raw', "thumb"]
+        .half-width.auto-margin
+          = f.number_field :quantity, placeholder: "per page", value: 10
 
 = render "shared/navigation"
