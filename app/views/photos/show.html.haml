@@ -1,8 +1,8 @@
 .row
   .col-md-3
   .col-md-6
-%center
-  %h1 Look at the #{@photo.name } pictures
+.center
+  %h1 Look at the #{@photo.name} pictures
   %hr/
 
   Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
@@ -16,8 +16,8 @@
 - result << search_photo(@photo.name, @photo.quantity)
 
 %center
-  %table{:border => 2}
-    %tbody{:align => "center"}
+  %table.main-table
+    %tbody.center
       %tr
         %th №
         %th Photo
@@ -25,20 +25,24 @@
       - (0...@photo.quantity).each do |i|
         %tr
           %td= i + 1
-          %td #{image_tag result[0][i][:urls][size]} #{render_shareable :url=> result[0][i].links.download, :buttons=> ['twitter', 'facebook'] }
-          %td{:width => "150"}
-            Id: #{result[0][i].id}
+          %td #{image_tag result[0][i][:urls][size]}
+          %td.main-table--small-width
+            %span.bold
+              Likes:
+            = result[0][i].likes
             %br/
-            Likes: #{result[0][i].likes}
+            %span.bold
+              Author name:
+            = result[0][i].user.name
             %br/
-            Author name: #{result[0][i].user.name}
-            %br/
-            Author username: #{result[0][i].user.username}
-            %br/
-            Author profile page: #{link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url}
+            %span.bold
+              Author profile page:
+            = link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url
             %br/
             = link_to 'Download this photo', result[0][i].links.download
             (#{result[0][i].width}x#{result[0][i].height})
             = button_to "Add to favorite", favorite_photos_path(photo_id: result[0][i].id), :type => 'button', :class => 'btn btn-primary'
+            %br/
+            = render_shareable :url => result[0][i].links.download, :buttons => ['twitter', 'facebook']
 
 = render "shared/navigation"

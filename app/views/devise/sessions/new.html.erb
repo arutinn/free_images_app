@@ -1,16 +1,12 @@
-<style>
-   html { overflow-x: hidden; }
-</style>
-
 <div class="row">
-	<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<center><h2>Please Login</h2></center>
-			<hr>
-		</div>
+  <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <center><h2>Please Login</h2></center>
+      <hr>
+    </div>
 </div>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
+
  <center><div class="form-inputs">
   <i class="fa fa-at"></i>
   <%= f.input :email, required: false, autofocus: true, placeholder: "Your email here", label: false%>
@@ -21,7 +17,7 @@
 </div></center>
 
 <center><div class="col-md-6">
-	<button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
+  <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
   <a class="btn btn-link" href="password/new">Forgot Your Password?</a>
 </div></center>
 

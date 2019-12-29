@@ -1,18 +1,15 @@
-:css
-  html { overflow-x: hidden; }
-
 .row
   .col-md-3
   .col-md-6
-    %center
+    .center
       %h1 This is your random photo:
       %hr/
 
 - random_p = random_photo
-%center
+.center
   = image_tag random_p.urls.small
 
-%center
+.center
   = link_to 'Download this photo', random_p.links.download
   (#{random_p.width}x#{random_p.height})
   = button_to "Add to favorite", favorite_photos_path(photo_id: random_p.id), class: 'btn btn-primary'

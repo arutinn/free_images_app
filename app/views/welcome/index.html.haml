@@ -1,15 +1,12 @@
-:css
-  html { overflow-x: hidden; }
-
 .row
   .col-md-3
   .col-md-6
-    %center
+    .center
       %h1 Welcome
       %p You can find high quality free photos below
       %hr/
 
-%center
+.center
   = link_to "New search", controller: "photos", action: "new"
   |
   = link_to "Previous searches", controller: "photos", action: "index"
