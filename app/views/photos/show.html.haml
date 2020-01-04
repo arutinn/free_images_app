@@ -5,15 +5,17 @@
   %h1 Look at the #{@photo.name} pictures
   %hr/
 
-  Size is: #{@photo.size} | Photos on page: #{@photo.quantity}
+  Size is:
+  %span.bold
+    = @photo.size
   |
-  =link_to 'Delete this search', photo_path(@photo), method: :delete
+  Photos on page:
+  %span.bold
+    = @photo.quantity
+  |
+  = link_to 'Delete this search', photo_path(@photo), method: :delete
   %br/
   %br/
-
-- size = @photo.size.to_sym
-- result = []
-- result << search_photo(@photo.name, @photo.quantity)
 
 %center
   %table.main-table
@@ -22,27 +24,11 @@
         %th №
         %th Photo
         %th Information
-      - (0...@photo.quantity).each do |i|
-        %tr
-          %td= i + 1
-          %td #{image_tag result[0][i][:urls][size]}
-          %td.main-table--small-width
-            %span.bold
-              Likes:
-            = result[0][i].likes
-            %br/
-            %span.bold
-              Author name:
-            = result[0][i].user.name
-            %br/
-            %span.bold
-              Author profile page:
-            = link_to result[0][i].user.portfolio_url, result[0][i].user.portfolio_url
-            %br/
-            = link_to 'Download this photo', result[0][i].links.download
-            (#{result[0][i].width}x#{result[0][i].height})
-            = button_to "Add to favorite", favorite_photos_path(photo_id: result[0][i].id), :type => 'button', :class => 'btn btn-primary'
-            %br/
-            = render_shareable :url => result[0][i].links.download, :buttons => ['twitter', 'facebook']
+      - search_photo(@photo.name, @photo.quantity).each_with_index do |photo, index|
+        = render "list_of_photos",
+          photo: photo,
+          index: index,
+          size: @photo.size.to_sym,
+          hide_download_button: false
 
 = render "shared/navigation"
