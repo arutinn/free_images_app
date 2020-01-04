@@ -1,0 +1,21 @@
+%tr
+  %td= index + 1
+  %td= image_tag photo[:urls][size]
+  %td.main-table--small-width
+    %span.bold
+      Likes:
+    = photo.likes
+    %br/
+    %span.bold
+      Author name:
+    = photo.user.name
+    %br/
+    %span.bold
+      Author profile page:
+    = link_to photo.user.portfolio_url, photo.user.portfolio_url
+    %br/
+    = link_to 'Download this photo', photo.links.download
+    (#{photo.width}x#{photo.height})
+    = button_to "Add to favorite", favorite_photos_path(photo_id: photo.id), :type => 'button', :class => 'btn btn-primary' unless hide_download_button
+    %br/
+    = render_shareable :url => photo.links.download, :buttons => ['twitter', 'facebook']

@@ -5,8 +5,18 @@
       %h1 Favorite photos list:
       %hr/
 
-.center
-  - @user.favorite_photos.each do |photo|
-    = image_tag search_photo_by_id(photo.photo_id).urls.thumb
+%center
+  %table.main-table
+    %tbody.center
+      %tr
+        %th №
+        %th Photo
+        %th Information
+      - @user.favorite_photos.each do |fav_photo|
+        = render "photos/list_of_photos",
+          photo: search_photo_by_id(fav_photo.photo_id),
+          index: @user.favorite_photos.index(fav_photo),
+          size: :small,
+          hide_download_button: true
 
 = render "shared/navigation"

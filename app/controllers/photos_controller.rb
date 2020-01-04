@@ -15,12 +15,13 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(photo_params)
+
     redirect_to @photo
-    # render 'new'
   end
 
   def destroy
     @photo.destroy
+
     redirect_to action: 'index'
   end
 
@@ -32,6 +33,7 @@ class PhotosController < ApplicationController
 
   def find_photo
     @photo = Photo.where(id: params[:id]).first
+
     render_404 unless @photo
   end
 
