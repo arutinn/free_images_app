@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.public_users
   end
 
   def show
