@@ -18,6 +18,8 @@
 
 - [x] Allow users to bookmark their favorite images
 
+- [x] Allow users to make profile public/hidden
+
 - [x] Add some stats
 
 - [x] Add calendar (or date with time) on homepage

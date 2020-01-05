@@ -9,4 +9,6 @@ class User < ApplicationRecord
          :validatable
 
   has_many :favorite_photos
+
+  scope :public_users, -> { where(public: true) }
 end
