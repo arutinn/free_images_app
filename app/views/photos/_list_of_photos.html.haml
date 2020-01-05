@@ -10,10 +10,11 @@
       Author name:
     = photo.user.name
     %br/
-    %span.bold
-      Author profile page:
-    = link_to photo.user.portfolio_url, photo.user.portfolio_url
-    %br/
+    - if photo.user.portfolio_url
+      %span.bold
+        Author profile page:
+      = link_to photo.user.portfolio_url, photo.user.portfolio_url
+      %br/
     = link_to 'Download this photo', photo.links.download
     (#{photo.width}x#{photo.height})
     = button_to "Add to favorite", favorite_photos_path(photo_id: photo.id), :type => 'button', :class => 'btn btn-primary' unless hide_download_button
